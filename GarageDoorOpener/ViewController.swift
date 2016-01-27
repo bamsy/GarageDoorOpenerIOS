@@ -16,8 +16,8 @@ class ViewController: UIViewController {
             print("empty string")
         } else {
             print(textFieldWS.text!)
-            //let postEndPoint: String = textFieldWS.text!
-            let postEndPoint: String = "http://jsonplaceholder.typicode.com/posts/1"
+            let postEndPoint: String = textFieldWS.text!
+            //let postEndPoint: String = "http://192.168.1.6:5000/garage"
             guard let url = NSURL(string:postEndPoint) else {
                 print("Error: cannot create URL")
                 return
@@ -43,8 +43,8 @@ class ViewController: UIViewController {
         }
     }
     override func viewDidLoad() {
+        textFieldWS.text = "http://192.168.1.6:5000/garage"
         super.viewDidLoad()
-        print("Hello World")
     }
 
     override func didReceiveMemoryWarning() {
